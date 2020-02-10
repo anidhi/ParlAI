@@ -1,0 +1,9 @@
+The perplexity (ppl) and BLEU score(bleu-4) of the trained model is :
+
+{ 'f1': 0.10714285714285712, 'bleu-4': 0.028570780729954972, 'lr': 0.001, 'total_train_updates': 20795, 'gpu_mem_percent': 0.685, 'loss': 3.817, 'token_acc': 0.3077, 'nll_loss': 3.817, 'ppl': 45.47}
+
+ParlAI's train_model.py Script was run for 3 hours with the following parameters :
+
+!python train_model.py -t twitter -m seq2seq -mf models/HW2_model3 --dict-file models/HW2_model3.dict -emb glove --beam-size 40 --inference beam -opt adam -esz 300 -nl 4 -dr 0.3 -bi True -att local --attention-time pre --rnn-class lstm --decoder same -bs 16 -lr 0.001 --max-train-time 10800 --save-every-n-secs  300 -mcs all
+
+
