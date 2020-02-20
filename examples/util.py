@@ -100,11 +100,11 @@ class DialogTurn:
 class MovieTriples(Dataset):
     def __init__(self, data_type, length=None):
         if data_type == 'train':
-            _file = '/Users/bibhashchandrajha/Downloads/MovieTriples/Training.triples.pkl'
+            _file = 'Datasets/MovieTriples/Training.triples.pkl'
         elif data_type == 'valid':
-            _file = '/Users/bibhashchandrajha/Downloads/MovieTriples/Validation.triples.pkl'
+            _file = 'Datasets/MovieTriples/Validation.triples.pkl'
         elif data_type == 'test':
-            _file = '/Users/bibhashchandrajha/Downloads/MovieTriples/Test.triples.pkl'
+            _file = 'Datasets/MovieTriples/Test.triples.pkl'
         self.utterance_data = []
 
         with open(_file, 'rb') as fp:
