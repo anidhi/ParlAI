@@ -78,16 +78,16 @@ def train(options, model):
             u3 = u3[:, 1:].contiguous().view(-1)
             
             loss = criteria(preds, u3)
-            target_toks = u3.ne(10003).long().sum().data
+            target_toks = u3.ne(10003).long().sum().data[0]
             
             num_words += target_toks
-            tr_loss += loss.data
+            tr_loss += loss.data[0]
             loss = loss/target_toks
             
             if options.lm:
                 lmpreds = lmpreds[:, :-1, :].contiguous().view(-1, lmpreds.size(2))
                 lm_loss = criteria(lmpreds, u3)
-                tlm_loss += lm_loss.data
+                tlm_loss += lm_loss.data[0]
                 lm_loss = lm_loss/target_toks
             
             optimizer.zero_grad()
@@ -300,7 +300,7 @@ def uniq_answer(fil):
     
 def main():
     print('torch version {}'.format(torch.__version__))
-    _dict_file = '/Users/bibhashchandrajha/Downloads/MovieTriples/Training.dict.pkl'
+    _dict_file = '/home/harshals/hed-dlg/Data/MovieTriples/Training.dict.pkl'
     # we use a common dict for all test, train and validation
     
     with open(_dict_file, 'rb') as fp2:

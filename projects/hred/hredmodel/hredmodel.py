@@ -5,8 +5,8 @@ import torch.nn.init as init
 import torch.optim as optim
 from torch.utils.data import DataLoader
 
-from modules import *
-from util import *
+from .modules import *
+from .util import *
 from collections import Counter
 
 use_cuda = torch.cuda.is_available()
