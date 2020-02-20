@@ -300,7 +300,7 @@ def uniq_answer(fil):
     
 def main():
     print('torch version {}'.format(torch.__version__))
-    _dict_file = '/Users/bibhashchandrajha/Downloads/MovieTriples/Training.dict.pkl'
+    _dict_file = 'Datasets/MovieTriples/Training.dict.pkl'
     # we use a common dict for all test, train and validation
     
     with open(_dict_file, 'rb') as fp2:
