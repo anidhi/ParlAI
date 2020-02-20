@@ -179,8 +179,8 @@ def get_sent_ll(u3, u3_lens, model, criteria, ses_encoding):
     preds, _ = model.dec([ses_encoding, u3, u3_lens])
     preds = preds[:, :-1, :].contiguous().view(-1, preds.size(2))
     u3 = u3[:, 1:].contiguous().view(-1)
-    loss = criteria(preds, u3).data[0]
-    target_toks = u3.ne(10003).long().sum().data[0]
+    loss = criteria(preds, u3).data
+    target_toks = u3.ne(10003).long().sum().data
     return -1*loss/target_toks
     
 # sample a sentence from the test set by using beam search
@@ -245,8 +245,8 @@ def calc_valid_loss(data_loader, criteria, model):
         u3 = u3[:, 1:].contiguous().view(-1)
         # do not include the lM loss, exp(loss) is perplexity
         loss = criteria(preds, u3)
-        num_words += u3.ne(10003).long().sum().data[0]
-        valid_loss += loss.data[0]
+        num_words += u3.ne(10003).long().sum().data
+        valid_loss += loss.data
 
     model.train()
     model.dec.set_teacher_forcing(cur_tc)
