@@ -1,6 +1,6 @@
 
 Implementation of HRED.In this folder, there is a parlai_hred folder that has the hred model agent and hredbot folder which has the necessary files to connect to Alexa skill.
-
+However, for complete code of ParlAI please go to the master_new branch. master_new branch was the branch that gradescope wasnt able to accomodate.
 1) how to run instructions,  3) link to the model parameters file
 
 Model was trained with:
