@@ -1,0 +1,39 @@
+
+Implementation of HRED.
+
+1) how to run instructions,  3) link to the model parameters file
+
+Model was trained with:
+
+python examples/train_model.py -t dailydialog -m internal:hred -mf [Wherever you want this to be] -nl 2 -rnn gru -hiddensize 512 -esz 256
+
+To run, clone this repo into a folder so that the path to hred.py is at ParlAI/parlai_internal/agents/hred/hred.py
+
+2)Interaction example :
+
+User Input  : mimic bot
+hredbot's Output : Welcome! This is an Alexa Echo skill!
+
+User Input  : Hi!
+hredbot's Output : Yes.....
+
+User Input  : How are you?
+hredbot's Output : I do not know.!!...
+
+User Input  : The world is burning!
+hredbot's Output : Is it snowing? ??!!!;;;I love the snow!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+User Input  : You are contradictory.
+hredbot's Output : I do not know .!!!!!.........
+
+User Input  : How could you not know?
+hredbot's Output : The winds are blowing, the storm is coming.
+
+User Input  : yOU ARE WEIRD
+hredbot's Output : ..................!!!!!!!!...................
+
+User Input  : What was that?
+hredbot's Output : ...................!!!!!!!!!!!!!!!!!!!
+
+User Input  : You have broken down!
+hredbot's Output : Is it snowing? ??!!!;;;I love the snow!!!!!!!!!!!!!!!!!!!!!!!!!!!!
