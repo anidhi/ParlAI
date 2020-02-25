@@ -1,5 +1,5 @@
 
-Implementation of HRED.
+Implementation of HRED.In this folder, there is a parlai_hred folder that has the hred model agent and hredbot folder which has the necessary files to connect to Alexa skill.
 
 1) how to run instructions,  3) link to the model parameters file
 
